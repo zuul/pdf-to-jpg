@@ -75,9 +75,8 @@ Currently tested on:
 
 # Contributing
 
-In lieu of a formal styleguide, take care to maintain the existing coding style.
+In lieu of a formal style guide, take care to maintain the existing coding style.
 
-*Suggestions are always welcome.*
 
 # License
 
