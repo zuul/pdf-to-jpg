@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="pdf-to-jpg : Bash script to convert all PDF document pages into JPG files.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>pdf-to-jpg</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/zuul/pdf-to-jpg">View on GitHub</a>
+
+          <h1 id="project_title">pdf-to-jpg</h1>
+          <h2 id="project_tagline">Bash script to convert all PDF document pages into JPG files.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/zuul/pdf-to-jpg/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/zuul/pdf-to-jpg/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="pdf-to-jpg" class="anchor" href="#pdf-to-jpg" aria-hidden="true"><span class="octicon octicon-link"></span></a>pdf-to-jpg</h1>
+
+<p>This is a small shell script to read a PDF document and convert each page into a JPG file.</p>
+
+<p>The quality and size (in pixels) of the resulting JPGs can be manually adjusted.</p>
+
+<h1>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h1>
+
+<p>This script wraps the work performed by <code>pdftoppm</code> and <code>convert</code>, both required to get this job done:</p>
+
+<ul>
+<li>
+<p>pdftoppm</p>
+
+<p>Part of the package <a href="http://poppler.freedesktop.org/">poppler-utils</a>, required to extract PDF pages to .PPM files.</p>
+
+<p><em>Copyright 1996-2014 Glyph &amp; Cog, LLC</em></p>
+
+<p>Installing on CentOS: <code># yum install poppler-utils</code></p>
+
+<p>Installing on Ubuntu: <code>$ sudo apt-get install poppler-utils</code></p>
+</li>
+<li>
+<p>convert</p>
+
+<p>Part of the package <a href="http://www.imagemagick.org/index.php">ImageMagick®</a>, required to convert .PPM files in .JPG files.</p>
+
+<p><em>Copyright (C) 1999-2006 ImageMagick Studio LLC</em></p>
+
+<p>Installing on CentOS: <code># yum install ImageMagick ImageMagick-devel</code></p>
+
+<p>Installing on Ubuntu: <code>$ sudo apt-get install imagemagick</code></p>
+</li>
+</ul>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>just call the script in a manner most suited to you while providing the required parameters:</p>
+
+<pre><code># sh ./pdf-to-jpg 1 /full/path/to/the/file.pdf username
+</code></pre>
+
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h1>
+
+<p>Currently does the <em>job hired to do</em>, no features provided.</p>
+
+<h1>
+<a id="limitations" class="anchor" href="#limitations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Limitations</h1>
+
+<p>A bit limited, for now, it sticks to reading a PDF document and extracting each page to JPEGs that will be stored inside a directory.</p>
+
+<h1>
+<a id="security" class="anchor" href="#security" aria-hidden="true"><span class="octicon octicon-link"></span></a>Security</h1>
+
+<p>This script accounts for common mistakes with values received, while there's room for improvement, it currently:</p>
+
+<ul>
+<li>Checks if parameter #1 exists and is a natural number;</li>
+<li>Checks if parameter #2 exists and points to a valid filepath;</li>
+<li>Checks if parameter #3 exists and represents a valid system username.</li>
+</ul>
+
+<p>There's also an extra verification that skips the entiry process if the target directory already exists to prevent collisions.</p>
+
+<h1>
+<a id="support" class="anchor" href="#support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support</h1>
+
+<p>Being a bash script, any OS that can handle bash should be able to run this script.</p>
+
+<p>Currently tested on:</p>
+
+<ul>
+<li>
+<p><a href="http://wiki.centos.org/Manuals/ReleaseNotes/CentOS5.11">CentOS release 5.11</a> (Final)</p>
+
+<p>ImageMagick version 6.2.8 05/07/12 Q16</p>
+
+<p>pdftoppm version 3.04</p>
+</li>
+</ul>
+
+<h1>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h1>
+
+<p>In lieu of a formal style guide, take care to maintain the existing coding style.</p>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
+
+<p>Free-for-all, but mind licenses from required packages.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">pdf-to-jpg maintained by <a href="https://github.com/zuul">zuul</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
